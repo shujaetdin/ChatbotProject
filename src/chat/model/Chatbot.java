@@ -64,6 +64,12 @@ public class Chatbot
 	}
 	
 	private void buildQuestions()
+	/**
+	 * mujah nahi patha hai kya ya hora ha hai. muaja ya bawakufhi dikthi hai.
+	 * builds a random response using chatbot sentence part using arrays.  
+	 * @param input
+	 * @return
+	 */
 	public String processConversation (String input)
 	{
 		String chatbotResponse = "";
@@ -160,7 +166,10 @@ public class Chatbot
 	
 	public boolean shoppingListChecker(String shoppingItem)
 	{
-		return false;
+		boolean answer=false;//valid answer
+		For(String shoppingCheck  )
+		if()
+		answer=true
 	}
 	
 	public boolean movieTitleChecker(String title)
@@ -247,4 +256,12 @@ public class Chatbot
 	{
 		this.content = content;
 	}
+	
+	public boolean htmTagChecker(String input)
+	{
+		boolean answer=false;//valid answer
+		return answer;
+	}
+	
+	
 }

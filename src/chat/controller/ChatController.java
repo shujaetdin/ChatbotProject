@@ -3,7 +3,7 @@ package chat.controller;
 import chat.view.*;
 import chat.model.*;
 
-public class ChatController 
+public class ChatController<display, PopupdDisplay> 
 {
 private Chatbot chatbot;
 private PopupdDisplay display;
@@ -11,7 +11,7 @@ private PopupdDisplay display;
 public Chatbot controller()
 {
 	chatbot = new Chatbot ("Shujaet Din");
-	display = new Popupdisplay();
+	display = new popupDisplay();
 }
 public void start()
 {
