@@ -45,7 +45,7 @@ public class Chatbot
 	
 	private void buildMovieList()
 	{
-		
+		movieList.add(new movie("spiderman"));
 	}
 	
 	private void buildShoppingList()

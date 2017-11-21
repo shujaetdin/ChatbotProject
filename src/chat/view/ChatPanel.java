@@ -16,11 +16,14 @@ public class ChatPanel extends JPanel
 {
 	private ChatController appController;
 	private JButton chatButton;
+	private JButton checkerButton;
 	private JTextField inputField;
 	private JTextArea chatArea;
 	private SpringLayout appLayout;
 	
 	public ChatPanel(ChatController appController)
+	
+	
 	{
 		super();
 		this.appController = appController;
@@ -51,6 +54,8 @@ public class ChatPanel extends JPanel
 		this.add(chatButton);
 		this.add(inputField);
 		this.add(chatArea);
+		chatArea.setEnabled(false);
+		chatArea.setEditable(false);
 		
 	}
 	
@@ -60,10 +65,18 @@ public class ChatPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
+		chatButton.addActionListener(new ActionListener()
+				{
+			public void actionPerformed(ActionEvent click)
+			{
+				String userText = inputField.getText();
+				String dsiplayText = appController.interactWithChatbot(userText);
+				chatArea.append(displayText);
+				inputField.setText("");
+			}	
+	});
+	
 	}
-	
-	
 }
 
 

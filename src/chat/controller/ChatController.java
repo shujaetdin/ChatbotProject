@@ -8,13 +8,14 @@ public class ChatController<display, PopupdDisplay>
 private Chatbot chatbot;
 private PopupdDisplay display;
 
-public Chatbot controller()
+public ChatController()
 {
 	chatbot = new Chatbot ("Shujaet Din");
 	display = new popupDisplay();
 }
 public void start()
 {
+	display.displayText("Welcome to Chatbot");
 	String response = display.collectResponse("What do you want to talk about?");
 	
 //	while (chatbot.lengthChecker(response) && !chatbot.quitChecker(response))
@@ -28,15 +29,34 @@ public void start()
 
 public String interactWithChatbot(String input)
 {
+	String chatbotSays = "";
 	
+	if(chatbot.quitecker(input))
+	{
+		close();
+	}
+	
+	
+	chatbotSays += chatbot.processConversation(input);
+	
+	chatbot.processConversation(input);
+	
+	return chatbotSays;
 }
 
 private String popupChat(String chat)
 {
-	String chatbotSays = "";
+	String chatbotSays = ""; 
 	
 	chatbotSays+= chatbot.processConversation(chat);
 	
 	return chatbotSays;
 }
+
+private void close()
+{
+	display.displayText("Goodbye");
+	System.exit(0);
+}
+
 }
