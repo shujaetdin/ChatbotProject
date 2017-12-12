@@ -20,15 +20,14 @@ public class Chatbot
 	
 	public Chatbot(String username)
 	{
-		this.movieList = null;
-		this.shoppingList = null;
+		this.movieList = new ArrayList<Movie>();
+		this.shoppingList = new ArrayList<String>();
 		this.cuteAnimalMemes = null;
-		this.currentTime = null;
-		this.questions = null;
+		this.questions = new String [10];
 		this.username = username;
 		this.content = null;
 		this.intro = null;
-		this.currentTime = null;
+		this.currentTime = LocalTime.now();
 		this.topics = new String [7];
 		this.verbs = new String [4];
 		this.followUps = new String [5];
@@ -45,7 +44,7 @@ public class Chatbot
 	
 	private void buildMovieList()
 	{
-		movieList.add(new movie("spiderman"));
+		movieList.add(new Movie("spiderman"));
 	}
 	
 	private void buildShoppingList()
@@ -64,8 +63,10 @@ public class Chatbot
 	}
 	
 	private void buildQuestions()
+	{
+		
+	}
 	/**
-	 * mujah nahi patha hai kya ya hora ha hai. muaja ya bawakufhi dikthi hai.
 	 * builds a random response using chatbot sentence part using arrays.  
 	 * @param input
 	 * @return
@@ -73,7 +74,9 @@ public class Chatbot
 	public String processConversation (String input)
 	{
 		String chatbotResponse = "";
+		chatbotResponse += currentTime.getHour() + ":"+ currentTime.getMinute() + "";
 		chatbotResponse += "You said:" + "\n" + input + "\n";
+		
 		chatbotResponse += buildChatbotResponse();
 		
 		return chatbotResponse;
@@ -111,6 +114,12 @@ public class Chatbot
 		topics[5] = "political science";
 		topics[6] = "finance";
 	}
+	
+	private void build()
+	{
+		
+	}
+	
 	private void buldFollowUps()
 	{
 		followUps[0] = "How you gonna dance?";
@@ -167,9 +176,12 @@ public class Chatbot
 	public boolean shoppingListChecker(String shoppingItem)
 	{
 		boolean answer=false;//valid answer
-		For(String shoppingCheck  )
+		For(String shoppingCheck)
 		if()
-		answer=true
+		{
+			
+		}
+		answer = true
 	}
 	
 	public boolean movieTitleChecker(String title)

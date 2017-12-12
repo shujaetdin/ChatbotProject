@@ -3,15 +3,15 @@ package chat.controller;
 import chat.view.*;
 import chat.model.*;
 
-public class ChatController<display, PopupdDisplay> 
+public class ChatController<display, PopupDisplay> 
 {
 private Chatbot chatbot;
-private PopupdDisplay display;
+private PopupDisplay display;
 
 public ChatController()
 {
 	chatbot = new Chatbot ("Shujaet Din");
-	display = new popupDisplay();
+	display = new PopupDisplay();
 }
 public void start()
 {
@@ -31,7 +31,7 @@ public String interactWithChatbot(String input)
 {
 	String chatbotSays = "";
 	
-	if(chatbot.quitecker(input))
+	if(chatbot.quitChecker(input))
 	{
 		close();
 	}
@@ -53,6 +53,20 @@ private String popupChat(String chat)
 	return chatbotSays;
 }
 
+public void useCheckers(String text)
+{
+	String response = "";
+	
+	if(chatbot.contentChecker(text))
+	{
+		response += "This text mathes the special content\n";
+	}
+if(chatbot.cuteAnimalMemeChecker(text))
+{
+	response += "";
+}
+// continue with all 
+}
 private void close()
 {
 	display.displayText("Goodbye");
