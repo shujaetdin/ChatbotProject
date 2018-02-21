@@ -14,4 +14,31 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/chat/view/images/chat3.png</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/chat3.png</locationURI>
+		</link>
+		<link>
+			<name>src/chat/view/images/icon5.png</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/icon5.png</locationURI>
+		</link>
+		<link>
+			<name>src/chat/view/images/load4.ico</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/load4.ico</locationURI>
+		</link>
+		<link>
+			<name>src/chat/view/images/save2.png</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/save2.png</locationURI>
+		</link>
+		<link>
+			<name>src/chat/view/images/twitter1.ico</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/twitter1.ico</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
